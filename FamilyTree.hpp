@@ -9,6 +9,9 @@
 using namespace std;
 namespace family{
         class Tree{
+            string root;
+            Tree* father;
+            Tree* mother;
         public:
             Tree(string name);
             Tree& addFather(string first,string second);
@@ -17,6 +20,7 @@ namespace family{
             string relation(string name);
             string find(string name);
             bool remove(string name);
+            Tree* search(string name);
         };
 
 };
